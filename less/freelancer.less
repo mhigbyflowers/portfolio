@@ -48,6 +48,7 @@ hr.star-primary:after {
     top: -0.8em;
     font-size: 2em;
     padding: 0 0.25em;
+
 }
 
 hr.star-light {
@@ -64,7 +65,7 @@ hr.star-primary {
 }
 
 hr.star-primary:after {
-    background-color: white;
+    background-color: @theme-secondary;
     color: @theme-primary;
 }
 
@@ -319,22 +320,7 @@ background: linear-gradient(to top, @theme-success 0%,@theme-secondary 20%);
     }
 }
 
-.floating-label-form-group-with-value {
-	label {
-	    top: 0;
-	    opacity: 1;
-	}
-}
 
-.floating-label-form-group-with-focus {
-	label {
-	    color: @theme-success;
-	}
-}
-
-form .row:first-child .floating-label-form-group {
-    border-top: 1px solid @gray-lighter;
-}
 
 footer {
 	color: white;
@@ -421,6 +407,7 @@ footer {
 
 .portfolio-modal {
 	.modal-content {
+		background: @theme-secondary;
 	    border-radius: 0;
 	    background-clip: border-box;
 	    -webkit-box-shadow: none;
@@ -488,4 +475,7 @@ justify-content: space-between;
 font-size: 1.5rem;
 	color:blue;
 }
+}
+.pixeljam{
+	width: 100%;
 }
