@@ -61,7 +61,7 @@ hr.star-primary {
   border-color: #434544;
 }
 hr.star-primary:after {
-  background-color: #BABEBD;
+  background-color: white;
   color: #434544;
 }
 .img-centered {
@@ -69,7 +69,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: linear-gradient(to bottom, #434544 12%, #BABEBD 100%);
+  background: linear-gradient(to bottom, #434544 22%, #BABEBD 100%);
   color: white;
 }
 header .container {
@@ -90,6 +90,13 @@ header .intro-text .name {
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
+  color: #a3b4d2;
+}
+header .intro-text .skills .skill-list {
+  color: white;
+}
+header .intro-text .skills .skill-list .span {
+  font-weight: lighter;
 }
 @media (min-width: 768px) {
   header .container {
@@ -97,7 +104,7 @@ header .intro-text .skills {
     padding-bottom: 100px;
   }
   header .intro-text .name {
-    font-size: 4.75em;
+    font-size: 3.75em;
   }
   header .intro-text .skills {
     font-size: 1.75em;
@@ -246,6 +253,19 @@ h2 {
 #portfolio * {
   z-index: 2;
 }
+.img-frame {
+  width: 100%;
+}
+.img-frame .face {
+  margin: auto;
+}
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+  padding: 2rem;
+}
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
@@ -289,6 +309,16 @@ h2 {
 .floating-label-form-group:not(:first-child) {
   padding-left: 14px;
   border-left: 1px solid #eeeeee;
+}
+.floating-label-form-group-with-value label {
+  top: 0;
+  opacity: 1;
+}
+.floating-label-form-group-with-focus label {
+  color: #486494;
+}
+form .row:first-child .floating-label-form-group {
+  border-top: 1px solid #eeeeee;
 }
 footer {
   color: white;
@@ -441,7 +471,6 @@ fieldset[disabled] .btn-success.active {
   outline: none;
 }
 .portfolio-modal .modal-content {
-  background: #BABEBD;
   border-radius: 0;
   background-clip: border-box;
   -webkit-box-shadow: none;
@@ -499,16 +528,4 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
-}
-.see-it {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.see-it__link {
-  font-size: 1.5rem;
-  color: blue;
-}
-.pixeljam {
-  width: 100%;
 }
