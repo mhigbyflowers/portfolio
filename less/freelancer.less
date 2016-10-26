@@ -48,7 +48,6 @@ hr.star-primary:after {
     top: -0.8em;
     font-size: 2em;
     padding: 0 0.25em;
-
 }
 
 hr.star-light {
@@ -65,7 +64,7 @@ hr.star-primary {
 }
 
 hr.star-primary:after {
-    background-color: @theme-secondary;
+    background-color: white;
     color: @theme-primary;
 }
 
@@ -76,7 +75,7 @@ hr.star-primary:after {
 header {
 	text-align: center;
 	// background: @theme-success;
-	background: linear-gradient(to bottom, @theme-primary 12%,@theme-secondary 100%);
+	background: linear-gradient(to bottom, @theme-primary 22%,@theme-secondary 100%);
 	color: white;
 	.container {
 		padding-top: 100px;
@@ -99,6 +98,15 @@ header {
 		.skills {
 			font-size: 1.25em;
 			font-weight: 300;
+			color:lighten(@theme-success,30%);
+
+			.skill-list{
+color:white;
+
+				.span{
+					font-weight: lighter;
+				}
+			}
 		}
 	}
 }
@@ -111,7 +119,7 @@ header {
 		}
 		.intro-text {
 			.name {
-				font-size: 4.75em;
+				font-size: 3.75em;
 			}
 			.skills {
 				font-size: 1.75em;
@@ -271,7 +279,21 @@ background: linear-gradient(to top, @theme-success 0%,@theme-secondary 20%);
         z-index: 2;
     }
 }
+.img-frame{
+	width:100%;
 
+	.face{
+		margin: auto;
+	}
+}
+
+.intro-container{
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
+	justify-content: center;
+	padding: 2rem;
+}
 @media(min-width:767px) {
     #portfolio {
         .portfolio-item {
@@ -320,7 +342,22 @@ background: linear-gradient(to top, @theme-success 0%,@theme-secondary 20%);
     }
 }
 
+.floating-label-form-group-with-value {
+	label {
+	    top: 0;
+	    opacity: 1;
+	}
+}
 
+.floating-label-form-group-with-focus {
+	label {
+	    color: @theme-success;
+	}
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid @gray-lighter;
+}
 
 footer {
 	color: white;
@@ -407,7 +444,6 @@ footer {
 
 .portfolio-modal {
 	.modal-content {
-		background: @theme-secondary;
 	    border-radius: 0;
 	    background-clip: border-box;
 	    -webkit-box-shadow: none;
@@ -466,16 +502,4 @@ footer {
     	opacity: 0;
     	display: none;
     }
-}
-.see-it{
-	width:100%;
-display: flex;
-justify-content: space-between;
-&__link{
-font-size: 1.5rem;
-	color:blue;
-}
-}
-.pixeljam{
-	width: 100%;
 }
